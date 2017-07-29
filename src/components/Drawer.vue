@@ -28,7 +28,7 @@ export default {
         { icon: 'home', text: 'Home', action: '#/' },
         { icon: 'vibration', text: 'Vibration', action: '#vibration' },
         { icon: 'flash_on', text: 'Flash', action: '#flash' },
-        { icon: 'contacts', text: 'Contacts', action: '#contact' },
+        { icon: 'contacts', text: 'Contacts', action: '#contacts' },
         { divider: true },
         { icon: 'help', text: 'See on Github', action: 'https://github.com/c4software/vuejs-cordova-sample' },
       ]
