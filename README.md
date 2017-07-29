@@ -2,6 +2,8 @@
 
 > Sample VueJS app thats use Cordova capabilities
 
+![Demo screenshot](demo.png)
+
 ## Build Setup
 
 ``` bash
@@ -19,6 +21,8 @@ npm run build --report
 ```
 
 # Cordova
+
+Todo write step
 
 ## Plugins
 
