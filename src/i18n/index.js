@@ -27,7 +27,7 @@ const messages = {
 
 
 export const i18n = new VueI18n({
-  locale: 'fr',
+  locale: navigator.language,
   fallbackLocale: 'en',
   messages,
 });
