@@ -25,13 +25,13 @@ export default {
   data: function() {
     return {
       items: [
-        { icon: 'home', text: 'Home', action: '#/' },
-        { icon: 'vibration', text: 'Vibration', action: '#vibration' },
-        { icon: 'camera', text: 'Camera', action: '#camera' },
-        { icon: 'flash_on', text: 'Flash', action: '#flash' },
-        { icon: 'contacts', text: 'Contacts', action: '#contacts' },
+        { icon: 'home', text: this.$t("home"), action: '#/' },
+        { icon: 'vibration', text: this.$t('vibration'), action: '#vibration' },
+        { icon: 'camera', text: this.$t('camera'), action: '#camera' },
+        { icon: 'flash_on', text: this.$t('flash'), action: '#flash' },
+        { icon: 'contacts', text: this.$t('contacts'), action: '#contacts' },
         { divider: true },
-        { icon: 'help', text: 'See on Github', action: 'https://github.com/c4software/vuejs-cordova-sample' },
+        { icon: 'help', text: this.$t('see_on_github'), action: 'https://github.com/c4software/vuejs-cordova-sample' },
       ]
     }
   }

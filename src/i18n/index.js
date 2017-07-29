@@ -14,7 +14,7 @@ const messages = {
     see_on_github: "See On Github"
   },
   fr: {
-    title: "Example VueJS + Cordova",
+    title: "Examples VueJS + Cordova",
     showSample: 'Afficher les examples',
     home: "Accueil",
     vibration: "Vibreur",
@@ -28,5 +28,6 @@ const messages = {
 
 export const i18n = new VueI18n({
   locale: 'fr',
+  fallbackLocale: 'en',
   messages,
 });
