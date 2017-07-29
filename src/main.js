@@ -6,14 +6,20 @@ import router from './router'
 
 Vue.config.productionTip = true
 
-require('vuetify/dist/vuetify.min.css')
+// Vuetify
+require('vuetify/dist/vuetify.min.css');
 import Vuetify from 'vuetify'
-Vue.use(Vuetify)
+Vue.use(Vuetify);
+
+// i18n
+import {i18n} from './i18n'
+
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  i18n,
   template: '<App/>',
   components: { App }
-})
+});
