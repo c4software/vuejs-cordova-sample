@@ -15,7 +15,7 @@ const messages = {
     startVibration: "Start vibration"
   },
   fr: {
-    title: "Examples VueJS + Cordova",
+    title: "Exemples VueJS + Cordova",
     showSample: 'Afficher les examples',
     home: "Accueil",
     vibration: "Vibreur",
