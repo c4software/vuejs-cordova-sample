@@ -5,7 +5,7 @@
     </v-navigation-drawer>
     <v-toolbar class="primary indigo">
       <v-toolbar-side-icon dark @click="toggleOverlay"></v-toolbar-side-icon>
-      <v-toolbar-title class="white--text">VueJS Cordova Sample</v-toolbar-title>
+      <v-toolbar-title @click="goHome" class="white--text">VueJS Cordova Sample</v-toolbar-title>
     </v-toolbar>
     <main>
       <v-container fluid>
@@ -29,6 +29,9 @@ export default {
   methods: {
     toggleOverlay (){
       this.drawer = !this.drawer
+    },
+    goHome (){
+      window.location.hash = "/";
     }
   }
 }
