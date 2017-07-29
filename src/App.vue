@@ -3,12 +3,12 @@
     <v-navigation-drawer v-model="drawer" absolute clipped temporary floating>
       <myContentDrawer />
     </v-navigation-drawer>
-    <v-toolbar class="primary indigo">
+    <v-toolbar class="primary indigo" fixed >
       <v-toolbar-side-icon dark @click="toggleOverlay"></v-toolbar-side-icon>
       <v-toolbar-title @click="goHome" class="white--text">{{ $t("title") }}</v-toolbar-title>
     </v-toolbar>
     <main>
-      <v-container fluid>
+      <v-container fluid pa-0>
         <router-view></router-view>
       </v-container>
     </main>

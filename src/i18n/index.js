@@ -11,7 +11,8 @@ const messages = {
     camera: "Camera",
     flash: "Flash",
     contacts: "Contacts",
-    see_on_github: "See On Github"
+    see_on_github: "See On Github",
+    startVibration: "Start vibration"
   },
   fr: {
     title: "Examples VueJS + Cordova",
@@ -21,7 +22,8 @@ const messages = {
     camera: "Camera",
     flash: "Flash",
     contacts: "Contacts",
-    see_on_github: "Voir sur Github"
+    see_on_github: "Voir sur Github",
+    startVibration: "Démarrer la vibration"
   }
 };
 
