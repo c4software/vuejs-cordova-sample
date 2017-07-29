@@ -1,6 +1,6 @@
 <template>
   <v-app toolbar fill-height>
-    <v-navigation-drawer v-model="drawer" absolute light persistent temporary>
+    <v-navigation-drawer v-model="drawer" absolute light persistent temporary overlay>
       <myContentDrawer />
     </v-navigation-drawer>
     <v-toolbar class="primary indigo">
