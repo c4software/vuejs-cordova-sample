@@ -11,6 +11,7 @@
     name: 'vibration',
     methods: {
       doVibrate () {
+        // Do vibration if available
         if (navigator.vibrate){
           navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100,30,100]);
         }else{
