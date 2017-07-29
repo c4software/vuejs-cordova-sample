@@ -6,6 +6,9 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+import Vuetify from 'vuetify'
+Vue.use(Vuetify)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
