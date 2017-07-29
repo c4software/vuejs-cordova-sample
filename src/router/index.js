@@ -5,6 +5,8 @@ import Vibration from '@/views/Vibration'
 import Flash from '@/views/Flash'
 import Contacts from '@/views/Contacts'
 import Camera from '@/views/Camera'
+import Nfc from '@/views/Nfc'
+import Localisation from '@/views/Localisation'
 
 Vue.use(Router);
 
@@ -30,6 +32,14 @@ export default new Router({
       path: '/camera',
       name: 'Camera',
       component: Camera
+    },{
+      path: '/nfc',
+      name: 'Nfc',
+      component: Nfc
+    },{
+      path: '/localisation',
+      name: 'Localisation',
+      component: Localisation
     }
   ]
 })
