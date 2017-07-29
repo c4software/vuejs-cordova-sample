@@ -27,6 +27,7 @@ export default {
       items: [
         { icon: 'home', text: 'Home', action: '#/' },
         { icon: 'vibration', text: 'Vibration', action: '#vibration' },
+        { icon: 'camera', text: 'Camera', action: '#camera' },
         { icon: 'flash_on', text: 'Flash', action: '#flash' },
         { icon: 'contacts', text: 'Contacts', action: '#contacts' },
         { divider: true },

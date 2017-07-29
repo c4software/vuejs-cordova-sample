@@ -4,6 +4,7 @@ import Home from '@/views/Home'
 import Vibration from '@/views/Vibration'
 import Flash from '@/views/Flash'
 import Contacts from '@/views/Contacts'
+import Camera from '@/views/Camera'
 
 Vue.use(Router);
 
@@ -25,6 +26,10 @@ export default new Router({
       path: '/contacts',
       name: 'Contacts',
       component: Contacts
+    },{
+      path: '/camera',
+      name: 'Camera',
+      component: Camera
     }
   ]
 })
