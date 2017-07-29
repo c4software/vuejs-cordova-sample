@@ -2,19 +2,14 @@
   <div class="home">
     <img class="logo" src="../assets/cordova_256.png" />
     <img class="logo" src="../assets/vuejs.png" />
-    <h4>{{ msg }}</h4>
-    <v-btn light @click.native.stop="openMenu">Show code samples</v-btn>
+    <h4>{{$t("title")}}</h4>
+    <v-btn light @click.native.stop="openMenu">{{$t("showSample")}}</v-btn>
   </div>
 </template>
 
 <script>
 export default {
   name: 'home',
-  data: () => {
-    return {
-      msg: 'VueJS Cordova Sample'
-    }
-  },
   methods: {
     openMenu: () => {
       // Not the best way… but i don’t wan’t vuex/store dependencie to this project!

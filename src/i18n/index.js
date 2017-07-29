@@ -4,10 +4,24 @@ Vue.use(VueI18n);
 
 const messages = {
   en: {
-    title: 'VueJS Cordova Sample'
+    title: 'VueJS Cordova Sample',
+    showSample: 'Show code samples',
+    home: "Home",
+    vibration: "Vibration",
+    camera: "Camera",
+    flash: "Flash",
+    contacts: "Contacts",
+    see_on_github: "See On Github"
   },
   fr: {
-    title: "Example VueJS + Cordova"
+    title: "Example VueJS + Cordova",
+    showSample: 'Afficher les examples',
+    home: "Accueil",
+    vibration: "Vibreur",
+    camera: "Camera",
+    flash: "Flash",
+    contacts: "Contacts",
+    see_on_github: "Voir sur Github"
   }
 };
 
