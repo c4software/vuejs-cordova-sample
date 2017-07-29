@@ -1,13 +1,7 @@
 <template>
   <v-app toolbar fill-height>
-    <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      light
-      height="100%"
-      persistent
-      temporary
-    >
+    <v-navigation-drawer v-model="drawer" absolute light persistent temporary>
+      <myContentDrawer />
     </v-navigation-drawer>
     <v-toolbar class="primary indigo">
       <v-toolbar-side-icon dark @click="toggleOverlay"></v-toolbar-side-icon>
@@ -22,8 +16,11 @@
 </template>
 
 <script>
+import myContentDrawer from "@/components/Drawer"
+
 export default {
   name: 'app',
+  components: {myContentDrawer},
   data: function() {
     return {
       drawer: false
