@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img src="../assets/cordova_256.png" />
-    <img src="../assets/vuejs.png" />
+    <img class="logo" src="../assets/cordova_256.png" />
+    <img class="logo" src="../assets/vuejs.png" />
     <h4>{{ msg }}</h4>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
   .home{
     text-align: center;
   }
-  .home > img{
+  img.logo{
     display: inline;
     width: 90px;
     padding: 10px;
