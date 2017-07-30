@@ -30,3 +30,4 @@ Todo write step
 - cordova-plugin-vibration
 - cordova-plugin-geolocation
 - cordova-plugin-flashlight
+- cordova-plugin-camera
