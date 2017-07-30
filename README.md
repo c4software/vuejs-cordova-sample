@@ -29,3 +29,4 @@ Todo write step
 - cordova-plugin-dialogs
 - cordova-plugin-vibration
 - cordova-plugin-geolocation
+- cordova-plugin-flashlight
