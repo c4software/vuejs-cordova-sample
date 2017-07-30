@@ -33,12 +33,14 @@
       return {loading: true}
     },
     mounted() {
+      // Init the leaflet map
       this.map = L.map('map').setView([47.47121, -0.55198], 5);
       L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
       this.getUserLocation();
     },
     methods: {
       getUserLocation() {
+        // Retrieve the current user location
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition((position) => {
             let user_position = [position.coords.latitude, position.coords.longitude];
