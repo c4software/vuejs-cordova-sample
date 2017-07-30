@@ -2,7 +2,7 @@
 
 <template>
   <div class="middle-centered">
-    <v-btn light v-on:click="doVibrate">{{$t("startVibration")}}</v-btn>
+    <v-btn v-on:click="doVibrate">{{$t("startVibration")}}</v-btn>
   </div>
 </template>
 

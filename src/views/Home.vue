@@ -4,7 +4,7 @@
       <img class="logo" src="../assets/cordova_256.png" />
       <img class="logo" src="../assets/vuejs.png" />
       <h4>{{$t("title")}}</h4>
-      <v-btn light @click.native.stop="openMenu">{{$t("showSample")}}</v-btn>
+      <v-btn @click.native.stop="openMenu">{{$t("showSample")}}</v-btn>
     </div>
   </div>
 </template>
