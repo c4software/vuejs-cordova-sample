@@ -31,6 +31,7 @@ export default {
         { icon: 'flash_on', text: this.$t('flash'), action: '#flash' },
         { icon: 'contacts', text: this.$t('contacts'), action: '#contacts' },
         { icon: 'gps_fixed', text: this.$t('localisation'), action: '#localisation' },
+        { icon: 'nfc', text: this.$t('nfc'), action: '#nfc' },
         { divider: true },
         { icon: 'help', text: this.$t('see_on_github'), action: 'https://github.com/c4software/vuejs-cordova-sample' },
       ]
