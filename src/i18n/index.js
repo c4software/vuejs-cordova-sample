@@ -16,7 +16,11 @@ const messages = {
     getPosition: "Obtaining Position",
     positionNotAvailable: "Can’t get your position",
     startVibration: "Start vibration",
-    startFlash: "Start flashlight"
+    flashlight: {
+      startFlash: "Start flashlight",
+      stopFlash: "Stop flashlight",
+      notAvailable: "Plugin not installed"
+    }
   },
   fr: {
     title: "Exemples VueJS + Cordova",
@@ -31,7 +35,11 @@ const messages = {
     getPosition: "Localisation en cours",
     positionNotAvailable: "Localisation impossible",
     startVibration: "Démarrer la vibration",
-    startFlash: "Allumer la lampe torche"
+    flashlight: {
+      startFlash: "Allumer la lampe torche",
+      stopFlash: "Éteindre la lampe torche",
+      notAvailable: "Plugin Cordova non installé"
+    }
   }
 };
 
