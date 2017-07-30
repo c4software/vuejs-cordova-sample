@@ -1,3 +1,5 @@
+// Require Cordova plugin : cordova-plugin-contacts
+
 <template>
 
 </template>

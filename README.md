@@ -32,3 +32,4 @@ Todo write step
 - cordova-plugin-flashlight
 - cordova-plugin-camera
 - phonegap-nfc
+- cordova-plugin-contacts
