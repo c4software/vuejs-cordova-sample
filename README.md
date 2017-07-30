@@ -26,4 +26,6 @@ Todo write step
 
 ## Plugins
 
+- cordova-plugin-dialogs
 - cordova-plugin-vibration
+- cordova-plugin-geolocation

@@ -13,6 +13,8 @@ const messages = {
     contacts: "Contacts",
     localisation: "Localisation",
     see_on_github: "See On Github",
+    getPosition: "Obtaining Position",
+    positionNotAvailable: "Can’t get your position",
     startVibration: "Start vibration"
   },
   fr: {
@@ -25,6 +27,8 @@ const messages = {
     contacts: "Contacts",
     localisation: "Localisation",
     see_on_github: "Voir sur Github",
+    getPosition: "Localisation en cours",
+    positionNotAvailable: "Localisation impossible",
     startVibration: "Démarrer la vibration"
   }
 };
