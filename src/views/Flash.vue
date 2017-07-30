@@ -26,7 +26,7 @@
       },
       toggle() {
         if (this.pluginInstalled()){
-          window.plugins.flashlight.toggle();
+          window.plugins.flashlight.toggle(this.setBtnTitle);
         }
       },
       switchOff() {
