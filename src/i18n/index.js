@@ -11,6 +11,7 @@ const messages = {
     camera: "Camera",
     flash: "Flash",
     contacts: "Contacts",
+    localisation: "Localisation",
     see_on_github: "See On Github",
     startVibration: "Start vibration"
   },
@@ -22,6 +23,7 @@ const messages = {
     camera: "Camera",
     flash: "Flash",
     contacts: "Contacts",
+    localisation: "Localisation",
     see_on_github: "Voir sur Github",
     startVibration: "Démarrer la vibration"
   }
