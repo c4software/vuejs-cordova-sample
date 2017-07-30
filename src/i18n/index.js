@@ -15,7 +15,8 @@ const messages = {
     see_on_github: "See On Github",
     getPosition: "Obtaining Position",
     positionNotAvailable: "Can’t get your position",
-    startVibration: "Start vibration"
+    startVibration: "Start vibration",
+    startFlash: "Start flashlight"
   },
   fr: {
     title: "Exemples VueJS + Cordova",
@@ -29,7 +30,8 @@ const messages = {
     see_on_github: "Voir sur Github",
     getPosition: "Localisation en cours",
     positionNotAvailable: "Localisation impossible",
-    startVibration: "Démarrer la vibration"
+    startVibration: "Démarrer la vibration",
+    startFlash: "Allumer la lampe torche"
   }
 };
 
