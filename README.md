@@ -31,3 +31,4 @@ Todo write step
 - cordova-plugin-geolocation
 - cordova-plugin-flashlight
 - cordova-plugin-camera
+- phonegap-nfc

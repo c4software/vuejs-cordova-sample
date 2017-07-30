@@ -22,6 +22,11 @@ const messages = {
       stopFlash: "Stop flashlight",
       notAvailable: "Plugin not installed"
     },
+    nfcText: {
+      waitingTag: "Scan a tag…",
+      tagSerial: "Serial number",
+      notAvailable: "Scan impossible. Cordova plugin not initialized."
+    },
     takePhoto: "Take a picture",
     error: "Not available"
   },
@@ -43,6 +48,11 @@ const messages = {
       startFlash: "Allumer la lampe torche",
       stopFlash: "Éteindre la lampe torche",
       notAvailable: "Plugin Cordova non installé"
+    },
+    nfcText: {
+      waitingTag: "En attente d’un tag…",
+      tagSerial: "Numéro de série",
+      notAvailable: "Scan impossible. Plugin Cordova non initialisé"
     },
     takePhoto: "Prendre une photo",
     error: "Non disponible"
