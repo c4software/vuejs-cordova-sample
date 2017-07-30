@@ -1,5 +1,5 @@
 // Require Cordova plugin : cordova-plugin-flashlight
-// TODO Change the button title
+
 <template>
   <div class="middle-centered">
     <v-btn v-on:click="toggle">{{ btnTitle }}</v-btn>
