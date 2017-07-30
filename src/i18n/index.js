@@ -20,7 +20,9 @@ const messages = {
       startFlash: "Start flashlight",
       stopFlash: "Stop flashlight",
       notAvailable: "Plugin not installed"
-    }
+    },
+    takePhoto: "Take a picture",
+    error: "Not available"
   },
   fr: {
     title: "Exemples VueJS + Cordova",
@@ -39,7 +41,9 @@ const messages = {
       startFlash: "Allumer la lampe torche",
       stopFlash: "Éteindre la lampe torche",
       notAvailable: "Plugin Cordova non installé"
-    }
+    },
+    takePhoto: "Prendre une photo",
+    error: "Non disponible"
   }
 };
 
