@@ -1,8 +1,8 @@
 <template>
   <div class="middle-centered">
     <div class="home">
-      <img class="logo" src="../assets/cordova_256.png" />
       <img class="logo" src="../assets/vuejs.png" />
+      <img class="logo" src="../assets/cordova_256.png" />
       <h4>{{$t("title")}}</h4>
       <v-btn @click.native.stop="openMenu">{{$t("showSample")}}</v-btn>
     </div>
