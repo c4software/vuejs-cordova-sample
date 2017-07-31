@@ -70,9 +70,10 @@ export const i18n = new VueI18n({
 
 function getLanguage() {
   try {
-    l = navigator.language.split("-");
+    let l = navigator.language.split("-");
     return l[0];
   }catch(err){
+    console.log(err);
     return navigator.language;
   }
 }
