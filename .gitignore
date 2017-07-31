@@ -12,5 +12,5 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-#cordova_app/platforms/*
-#cordova_app/plugins/*
+cordova_app/platforms/*
+cordova_app/plugins/*
