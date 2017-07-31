@@ -33,13 +33,14 @@ const messages = {
   fr: {
     title: "Exemples VueJS + Cordova",
     showSample: 'Afficher les examples',
-    home: "Accueil",
-    vibration: "Vibreur",
-    camera: "Camera",
-    flash: "Flash",
-    contacts: "Contacts",
-    localisation: "Localisation",
-    nfc: "Nfc",
+    drawer: {
+      home: "Accueil",
+      vibration: "Vibreur",
+      camera: "Camera",
+      flash: "Flash",
+      localisation: "Localisation",
+      nfc: "Nfc"
+    },
     see_on_github: "Voir sur Github",
     getPosition: "Localisation en cours",
     positionNotAvailable: "Localisation impossible",

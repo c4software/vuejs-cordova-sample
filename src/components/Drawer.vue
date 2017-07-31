@@ -25,13 +25,12 @@ export default {
   data: function() {
     return {
       items: [
-        { icon: 'home', text: this.$t("home"), action: '#/' },
-        { icon: 'vibration', text: this.$t('vibration'), action: '#vibration' },
-        { icon: 'camera', text: this.$t('camera'), action: '#camera' },
-        { icon: 'flash_on', text: this.$t('flash'), action: '#flash' },
-        { icon: 'contacts', text: this.$t('contacts'), action: '#contacts' },
-        { icon: 'gps_fixed', text: this.$t('localisation'), action: '#localisation' },
-        { icon: 'nfc', text: this.$t('nfc'), action: '#nfc' },
+        { icon: 'home', text: this.$t("drawer.home"), action: '#/' },
+        { icon: 'vibration', text: this.$t('drawer.vibration'), action: '#vibration' },
+        { icon: 'camera', text: this.$t('drawer.camera'), action: '#camera' },
+        { icon: 'flash_on', text: this.$t('drawer.flash'), action: '#flash' },
+        { icon: 'gps_fixed', text: this.$t('drawer.localisation'), action: '#localisation' },
+        { icon: 'nfc', text: this.$t('drawer.nfc'), action: '#nfc' },
         { divider: true },
         { icon: 'help', text: this.$t('see_on_github'), action: 'https://github.com/c4software/vuejs-cordova-sample' },
       ]
