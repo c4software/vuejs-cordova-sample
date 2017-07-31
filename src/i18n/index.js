@@ -19,8 +19,8 @@ const messages = {
     positionNotAvailable: "Can’t get your position",
     startVibration: "Start vibration",
     flashlight: {
-      startFlash: "Start flashlight",
-      stopFlash: "Stop flashlight",
+      start: "Start flashlight",
+      stop: "Stop flashlight",
       notAvailable: "Plugin not installed"
     },
     nfcText: {
@@ -47,8 +47,8 @@ const messages = {
     positionNotAvailable: "Localisation impossible",
     startVibration: "Démarrer la vibration",
     flashlight: {
-      startFlash: "Allumer la lampe torche",
-      stopFlash: "Éteindre la lampe torche",
+      start: "Allumer la lampe torche",
+      stop: "Éteindre la lampe torche",
       notAvailable: "Plugin Cordova non installé"
     },
     nfcText: {
@@ -63,7 +63,16 @@ const messages = {
 
 
 export const i18n = new VueI18n({
-  locale: navigator.language,
+  locale: getLanguage(),
   fallbackLocale: 'en',
   messages,
 });
+
+function getLanguage() {
+  try {
+    l = navigator.language.split("-");
+    return l[0];
+  }catch(err){
+    return navigator.language;
+  }
+}
