@@ -21,15 +21,16 @@
     methods: {
       takePicture() {
         if (navigator.camera) {
-          navigator.camera.getPicture(this.showPicture, () => {
-            nativeAlert(this.$t("error"));
-          }, {});
+          navigator.camera.getPicture(this.setPicture, this.error, {});
         }else{
-          nativeAlert(this.$t("error"));
+          this.error();
         }
       },
       setPicture(imagePath){
         this.imagePath = imagePath;
+      },
+      error(){
+        nativeAlert(this.$t("error"));
       }
     }
   }
