@@ -16,7 +16,7 @@
     mounted(){
       if (typeof(nfc) !== "undefined"){
         // Nfc is available, waiting for scan
-        nfc.addNdefListener(this.displayTagId, this.success, this.error);
+        nfc.addTagDiscoveredListener(this.displayTagId, this.success, this.error);
       }else{
         // Plugin not present or failed to initialized.
         this.error();
@@ -24,13 +24,15 @@
     },
     beforeDestroy(){
       if (typeof(nfc) !== "undefined") {
-        nfc.removeNdefListener(this.displayTagId);
+        nfc.removeTagDiscoveredListener(this.displayTagId);
       }
     },
     methods: {
-      displayTagId(data){
+      displayTagId(nfcEvent){
         // Show the tag Id.
-        nativeAlert(this.$t("nfcText.tagSerial") + " : " + data.tag.id);
+        let tag = nfcEvent.tag;
+        let tagId = nfc.bytesToHexString(tag.id);
+        nativeAlert(this.$t("nfcText.tagSerial") + " : " + tagId);
       },
       error(){
         this.compatible = false;
