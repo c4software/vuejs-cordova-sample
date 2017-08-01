@@ -22,7 +22,13 @@ npm run build --report
 
 # Cordova
 
-Todo write step
+Run the command :
+
+```
+npm run build 
+cd cordova_app
+cordova run # or build
+```
 
 ## Plugins
 
