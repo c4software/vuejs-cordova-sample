@@ -26,7 +26,8 @@ const messages = {
     nfcText: {
       waitingTag: "Scan a tag…",
       tagSerial: "Serial number",
-      notAvailable: "Scan impossible. Cordova plugin not initialized."
+      notAvailable: "Your mobile is not compatible.",
+      showSettings: "Enable NFC"
     },
     takePhoto: "Take a picture",
     error: "Not available"
@@ -54,7 +55,8 @@ const messages = {
     nfcText: {
       waitingTag: "En attente d’un tag…",
       tagSerial: "Numéro de série",
-      notAvailable: "Scan impossible. Plugin Cordova non initialisé"
+      notAvailable: "Votre mobile est incompatible.",
+      showSettings: "Activer le NFC"
     },
     takePhoto: "Prendre une photo",
     error: "Non disponible"
