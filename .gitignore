@@ -14,3 +14,4 @@ yarn-error.log*
 
 cordova_app/platforms/*
 cordova_app/plugins/*
+cordova_app/www/
