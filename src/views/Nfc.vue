@@ -2,6 +2,7 @@
 <template>
   <div class="middle-centered">
     <span v-if="compatible">{{$t("nfcText.waitingTag")}}</span>
+    <v-btn v-on:click="showSettings" v-else-if="nfc_disabled">{{$t("nfcText.showSettings")}}</v-btn>
     <span v-else>{{$t("nfcText.notAvailable")}}</span>
   </div>
 </template>
@@ -11,7 +12,7 @@
   export default {
     name: 'nfc',
     data(){
-      return {compatible: true}
+      return {compatible: true, nfc_disabled: false}
     },
     mounted(){
       if (typeof(nfc) !== "undefined"){
@@ -34,11 +35,20 @@
         let tagId = nfc.bytesToHexString(tag.id);
         nativeAlert(this.$t("nfcText.tagSerial") + " : " + tagId);
       },
-      error(){
-        this.compatible = false;
+      error(e){
+        if(e === "NFC_DISABLED"){
+          this.compatible = false;
+          this.nfc_disabled = true;
+        }else{
+          this.nfc_disabled = false;
+          this.compatible = false;
+        }
       },
       success(){
         console.log("Nfc initialized");
+      },
+      showSettings(){
+        nfc.showSettings();
       }
     }
   }
