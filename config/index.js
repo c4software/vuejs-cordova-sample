@@ -4,8 +4,8 @@ var path = require('path')
 module.exports = {
   build: {
     env: require('./prod.env'),
-    index: path.resolve(__dirname, '../dist/index.html'),
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    index: path.resolve(__dirname, '../cordova_app/www/index.html'),
+    assetsRoot: path.resolve(__dirname, '../cordova_app/www'),
     assetsSubDirectory: 'static',
     assetsPublicPath: './',
     productionSourceMap: true,
