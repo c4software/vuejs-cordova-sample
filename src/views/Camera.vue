@@ -21,7 +21,7 @@
     methods: {
       takePicture() {
         if (navigator.camera) {
-          navigator.camera.getPicture(this.setPicture, this.error, {});
+          navigator.camera.getPicture(this.setPicture, {}, {});
         }else{
           this.error();
         }
