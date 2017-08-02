@@ -12,7 +12,10 @@
   export default {
     name: 'nfc',
     data(){
-      return {compatible: true, nfc_disabled: false}
+      return {
+        compatible: true,
+        nfc_disabled: false
+      }
     },
     mounted(){
       this.registerTagEvent();
