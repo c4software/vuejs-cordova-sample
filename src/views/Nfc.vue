@@ -15,20 +15,27 @@
       return {compatible: true, nfc_disabled: false}
     },
     mounted(){
-      if (typeof(nfc) !== "undefined"){
-        // Nfc is available, waiting for scan
-        nfc.addTagDiscoveredListener(this.displayTagId, this.success, this.error);
-      }else{
-        // Plugin not present or failed to initialized.
-        this.error();
-      }
+      this.registerTagEvent();
     },
     beforeDestroy(){
-      if (typeof(nfc) !== "undefined") {
-        nfc.removeTagDiscoveredListener(this.displayTagId);
-      }
+      this.unregisterTagEvent();
     },
     methods: {
+      registerTagEvent(){
+        document.removeEventListener("resume", this.registerTagEvent, false);
+        if (typeof(nfc) !== "undefined"){
+          // Nfc is available, waiting for scan
+          nfc.addTagDiscoveredListener(this.displayTagId, this.success, this.error);
+        }else{
+          // Plugin not present or failed to initialized.
+          this.error();
+        }
+      },
+      unregisterTagEvent(){
+        if (typeof(nfc) !== "undefined") {
+          nfc.removeTagDiscoveredListener(this.displayTagId);
+        }
+      },
       displayTagId(nfcEvent){
         // Show the tag Id.
         let tag = nfcEvent.tag;
@@ -45,10 +52,13 @@
         }
       },
       success(){
+        this.compatible = true;
+        this.nfc_disabled = false;
         console.log("Nfc initialized");
       },
       showSettings(){
         nfc.showSettings();
+        document.addEventListener("resume", this.registerTagEvent, false);
       }
     }
   }
