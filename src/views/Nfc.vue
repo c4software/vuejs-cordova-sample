@@ -1,7 +1,7 @@
 // Require Cordova plugin : phonegap-nfc
 <template>
   <div class="middle-centered">
-      <span v-if="true">
+      <span v-if="compatible">
         {{$t("nfcText.waitingTag")}}
         <br>
         <v-dialog v-model="dialog" scrollable>
