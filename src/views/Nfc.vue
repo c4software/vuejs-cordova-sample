@@ -63,6 +63,7 @@
         // Show the tag Id.
         let tag = nfcEvent.tag;
         let tagId = nfc.bytesToHexString(tag.id);
+        this.items.push(tagId);
         nativeAlert(this.$t("nfcText.tagSerial") + " : " + tagId);
       },
       error(e){
