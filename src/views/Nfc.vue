@@ -1,9 +1,28 @@
 // Require Cordova plugin : phonegap-nfc
 <template>
   <div class="middle-centered">
-    <span v-if="compatible">{{$t("nfcText.waitingTag")}}</span>
-    <v-btn v-on:click="showSettings" v-else-if="nfc_disabled">{{$t("nfcText.showSettings")}}</v-btn>
-    <span v-else>{{$t("nfcText.notAvailable")}}</span>
+      <span v-if="true">
+        {{$t("nfcText.waitingTag")}}
+        <br>
+        <v-dialog v-model="dialog" scrollable>
+          <v-btn slot="activator">{{$t("nfcText.history")}}</v-btn>
+          <v-card>
+            <v-card-title>{{$t("nfcText.history")}}</v-card-title>
+            <v-divider></v-divider>
+            <v-card-text style="height: 300px;">
+              <v-list>
+                <v-list-tile v-for="item in items" v-bind:key="item">
+                  <v-list-tile-content>
+                    <v-list-tile-title v-text="item"></v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </v-list>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+      </span>
+      <v-btn v-on:click="showSettings" v-else-if="nfc_disabled">{{$t("nfcText.showSettings")}}</v-btn>
+      <span v-else>{{$t("nfcText.notAvailable")}}</span>
   </div>
 </template>
 
@@ -14,7 +33,8 @@
     data(){
       return {
         compatible: true,
-        nfc_disabled: false
+        nfc_disabled: false,
+        items: []
       }
     },
     mounted(){

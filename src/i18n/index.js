@@ -27,7 +27,8 @@ const messages = {
       waitingTag: "Scan a tag…",
       tagSerial: "Serial number",
       notAvailable: "Your mobile is not compatible.",
-      showSettings: "Enable NFC"
+      showSettings: "Enable NFC",
+      history: "History"
     },
     takePhoto: "Take a picture",
     error: "Not available"
@@ -56,7 +57,8 @@ const messages = {
       waitingTag: "En attente d’un tag…",
       tagSerial: "Numéro de série",
       notAvailable: "Votre mobile est incompatible.",
-      showSettings: "Activer le NFC"
+      showSettings: "Activer le NFC",
+      history: "Historique"
     },
     takePhoto: "Prendre une photo",
     error: "Non disponible"
