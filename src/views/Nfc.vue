@@ -34,7 +34,14 @@
       return {
         compatible: true,
         nfc_disabled: false,
-        items: []
+        dialog: false,
+        items: JSON.parse((localStorage.getItem("scanHistory")||"[]")),
+      }
+    },
+    watch:{
+      items: function (v) {
+        // Watch push on the items data. If a new item is push save it to the « localstorage ».
+        localStorage.setItem("scanHistory", JSON.stringify(this.items));
       }
     },
     mounted(){
