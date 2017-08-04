@@ -28,7 +28,8 @@ const messages = {
       tagSerial: "Serial number",
       notAvailable: "Your mobile is not compatible.",
       showSettings: "Enable NFC",
-      history: "History"
+      history: "History",
+      noHistory: "Empty"
     },
     takePhoto: "Take a picture",
     error: "Not available"
@@ -58,7 +59,8 @@ const messages = {
       tagSerial: "Numéro de série",
       notAvailable: "Votre mobile est incompatible.",
       showSettings: "Activer le NFC",
-      history: "Historique"
+      history: "Historique",
+      noHistory: "Aucun historique"
     },
     takePhoto: "Prendre une photo",
     error: "Non disponible"

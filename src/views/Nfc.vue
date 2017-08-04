@@ -10,10 +10,17 @@
             <v-card-title>{{$t("nfcText.history")}}</v-card-title>
             <v-divider></v-divider>
             <v-card-text style="height: 300px;">
-              <v-list>
+              <v-list v-if="items.length > 0">
                 <v-list-tile v-for="item in items" v-bind:key="item">
                   <v-list-tile-content>
                     <v-list-tile-title v-text="item"></v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </v-list>
+              <v-list v-else>
+                <v-list-tile>
+                  <v-list-tile-content>
+                    <v-list-tile-title v-text="$t('nfcText.noHistory')" class="text-xs-center"></v-list-tile-title>
                   </v-list-tile-content>
                 </v-list-tile>
               </v-list>
