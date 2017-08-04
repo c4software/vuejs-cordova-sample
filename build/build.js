@@ -26,6 +26,13 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
       chunkModules: false
     }) + '\n\n')
 
-    console.log(chalk.cyan('  Build complete.\n'))
+    console.log(chalk.cyan('Build complete. \n'))
+
+    console.log(chalk.cyan("====================="))
+    console.log(chalk.cyan("===== CORDOVA  ======"))
+    console.log(chalk.cyan("====================="))
+
+    console.log('$ cd cordova_app')
+    console.log('$ cordova run \n')
   })
 })
