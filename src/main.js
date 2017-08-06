@@ -14,12 +14,24 @@ Vue.use(Vuetify);
 // i18n
 import {i18n} from './i18n'
 
+const isCordovaApp = (typeof window.cordova !== "undefined");
+const init = () => {
+  new Vue({
+    el: '#app',
+    router,
+    i18n,
+    template: '<App/>',
+    components: { App }
+  });
+};
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  i18n,
-  template: '<App/>',
-  components: { App }
+// Wait for the deviceready event to start the render
+document.addEventListener("deviceready", () => {
+  console.log("Device is ready, Render the App");
+  init();
 });
+
+// If we are not in Cordova, manually trigger the deviceready event
+if (!isCordovaApp){
+  document.dispatchEvent(new CustomEvent("deviceready", {}));
+}
