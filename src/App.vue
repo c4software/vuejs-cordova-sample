@@ -4,7 +4,7 @@
       <myContentDrawer />
     </v-navigation-drawer>
     <v-toolbar class="primary indigo" fixed >
-      <v-toolbar-side-icon dark @click="toggleOverlay"></v-toolbar-side-icon>
+      <v-toolbar-side-icon dark @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title @click="goHome" class="white--text">{{ $t("title") }}</v-toolbar-title>
     </v-toolbar>
     <main>
@@ -27,9 +27,6 @@ export default {
     }
   },
   methods: {
-    toggleOverlay (){
-      this.drawer = !this.drawer
-    },
     goHome (){
       window.location.hash = "/";
     }
