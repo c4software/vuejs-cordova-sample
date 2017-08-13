@@ -14,7 +14,6 @@ Vue.use(Vuetify);
 // i18n
 import {i18n} from './i18n'
 
-const isCordovaApp = (typeof window.cordova !== "undefined");
 const init = () => {
   new Vue({
     el: '#app',
@@ -32,6 +31,7 @@ document.addEventListener("deviceready", () => {
 });
 
 // If we are not in Cordova, manually trigger the deviceready event
+const isCordovaApp = (typeof window.cordova !== "undefined");
 if (!isCordovaApp){
   document.dispatchEvent(new CustomEvent("deviceready", {}));
 }
