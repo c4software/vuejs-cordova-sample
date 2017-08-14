@@ -14,8 +14,8 @@ export default {
   name: 'home',
   methods: {
     openMenu: () => {
-      // Not the best way… but i don’t wan’t vuex/store dependencie to this project!
-      document.getElementsByClassName("toolbar__side-icon")[0].click();
+      // When user tap the button dispatch an event into the dom.
+      document.dispatchEvent(new CustomEvent("openDrawer", {}));
     }
   }
 }

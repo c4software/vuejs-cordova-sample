@@ -21,12 +21,23 @@ import myContentDrawer from "@/components/Drawer"
 export default {
   name: 'app',
   components: {myContentDrawer},
+  mounted: function () {
+    // Listen for event openDrawer (triggered by other component, like the button in the home)
+    document.addEventListener("openDrawer", this.openDrawer);
+  },
+  beforeDestroy: function () {
+    // If the component is unmount, unlisten the event.
+    document.removeEventListener("openDrawer", this.openDrawer);
+  },
   data: function() {
     return {
       drawer: false
     }
   },
   methods: {
+    openDrawer (){
+      this.drawer = true;
+    },
     goHome (){
       window.location.hash = "/";
     }
