@@ -38,6 +38,12 @@
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
       this.getUserLocation();
     },
+    beforeDestroy(){
+      // Destroy the map object on leave
+      if(!(this.map === undefined)){
+        this.map.remove();
+      }
+    },
     methods: {
       getUserLocation() {
         // Retrieve the current user location
