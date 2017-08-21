@@ -9,9 +9,11 @@ install:
   - nvm install 5
   - npm cache clean
   - npm install
+  - npm run build
   - npm install -g cordova
 
 before_script:
+  - cd cordova_app/
   - cordova platform add android
 
 script:
