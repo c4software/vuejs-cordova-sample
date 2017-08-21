@@ -1,11 +1,21 @@
-sudo: required
+language: android
 
-services:
-  - docker
+node_js:
+  - 5.5
 
-before_install:
-  - docker pull c4software/cordova
-  - docker run -i -t c4software/cordova /bin/bash
+branches:
+  only:
+  - master
+
+install:
+  - npm cache clean
+  - npm install
+  - npm install -g cordova
+  - echo y | android update sdk -u --filter android-22,android-23
+
+before_script:
+  - cordova platform add android
 
 script:
-  - ls
+  - cordova prepare
+  - cordova build android --release
