@@ -1,17 +1,15 @@
 language: android
 
-node_js:
-  - 5.5
-
-branches:
-  only:
-  - master
+android:
+  components:
+    - build-tools-25.2.3
+    - android-25
 
 install:
+  - nvm install 5
   - npm cache clean
   - npm install
   - npm install -g cordova
-  - echo y | android update sdk -u --filter android-22,android-23
 
 before_script:
   - cordova platform add android
