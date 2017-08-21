@@ -5,6 +5,7 @@ services:
 
 before_install:
   - docker pull c4software/cordova
+  - docker run -i -t c4software/cordova /bin/bash
 
 script:
   - ls
