@@ -19,13 +19,17 @@
       }
     },
     methods: {
+      // Use the camera plugin to capture image
       takePicture() {
         if (navigator.camera) {
           navigator.camera.getPicture(this.setPicture, {}, {});
         }else{
+          // If the navigator.camera is not available display generic error to the user.
           this.error();
         }
       },
+      // Set the picture path in the data of the vue
+      // this action will automatically update the view.
       setPicture(imagePath){
         this.imagePath = imagePath;
       },
