@@ -26,7 +26,7 @@ const init = () => {
 
 // Wait for the deviceready event to start the render
 document.addEventListener("deviceready", () => {
-  console.log("Device is ready, Render the App");
+  console.log("Ready, Render the App");
   init();
 });
 
