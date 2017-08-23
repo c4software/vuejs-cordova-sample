@@ -10,9 +10,11 @@
   export default {
     name: 'flash',
     mounted(){
+      // Set the ButtonTitle according the plugin state
       this.setBtnTitle()
     },
     beforeDestroy(){
+      // When the view is destroyed turnoff the flashlight
       this.switchOff();
     },
     data: () => {
@@ -22,19 +24,23 @@
     },
     methods: {
       pluginInstalled() {
+        // Check if the cordova Flashlight is available
         return (typeof(plugins) !== "undefined" && typeof(window.plugins.flashlight) !== "undefined");
       },
       toggle() {
         if (this.pluginInstalled()){
+          // Toggle the flashlight state
           window.plugins.flashlight.toggle(this.setBtnTitle);
         }
       },
       switchOff() {
         if (this.pluginInstalled()){
+          // Turn off the flashlight led
           window.plugins.flashlight.switchOff();
         }
       },
       setBtnTitle() {
+        // Manage the button title state
         if (this.pluginInstalled()){
           // Test if flashlight is On ?
           if (window.plugins.flashlight.isSwitchedOn()){
