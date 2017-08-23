@@ -15,6 +15,7 @@ export default {
   methods: {
     openMenu: () => {
       // When user tap the button dispatch an event into the dom.
+      // Its will trigger the drawer Open event in (componnents/Drawer.vue)
       document.dispatchEvent(new CustomEvent("openDrawer", {}));
     }
   }
