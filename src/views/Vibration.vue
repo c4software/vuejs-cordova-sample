@@ -13,6 +13,7 @@
       doVibrate () {
         // Do vibration if available
         if (navigator.vibrate){
+          // S.O.S in Morse ;)
           navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100,30,100]);
         }else{
           console.error("[cordova-plugin-vibration] Is required to use this function");
@@ -21,7 +22,3 @@
     }
   }
 </script>
-
-<style scoped>
-
-</style>
