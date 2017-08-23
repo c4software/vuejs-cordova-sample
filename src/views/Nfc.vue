@@ -47,19 +47,23 @@
     },
     watch:{
       items: function (v) {
-        // Watch push on the items data. If a new item is push save it to the « localstorage ».
+        // Watch push on the items data. If a new item is push save it to the « localStorage ».
         localStorage.setItem("scanHistory", JSON.stringify(this.items));
       }
     },
     mounted(){
+      // When the view is mounted, register the scan tag event.
       this.registerTagEvent();
     },
     beforeDestroy(){
+      // When the view is destroyed (user leave), unregister the scan tag event, to avoid scanning tag in other view
       this.unregisterTagEvent();
     },
     methods: {
       registerTagEvent(){
+        // Unregister previously « resume » event listener.
         document.removeEventListener("resume", this.registerTagEvent, false);
+
         if (typeof(nfc) !== "undefined"){
           // Nfc is available, waiting for scan
           nfc.addTagDiscoveredListener(this.displayTagId, this.success, this.error);
@@ -69,18 +73,24 @@
         }
       },
       unregisterTagEvent(){
+        // Test if the plugin is defined
         if (typeof(nfc) !== "undefined") {
           nfc.removeTagDiscoveredListener(this.displayTagId);
         }
       },
       displayTagId(nfcEvent){
-        // Show the tag Id.
+        // Decode tag data from the plugin
         let tag = nfcEvent.tag;
         let tagId = nfc.bytesToHexString(tag.id);
+
+        // Push the new tag to the saved list
         this.items.push(tagId);
+
+        // Show the tag Id to the user
         nativeAlert(this.$t("nfcText.tagSerial") + " : " + tagId);
       },
       error(e){
+        // Manage the state
         if(e === "NFC_DISABLED"){
           this.compatible = false;
           this.nfc_disabled = true;
@@ -95,7 +105,11 @@
         console.log("Nfc initialized");
       },
       showSettings(){
+        // Trigger the phone settings to enable the Nfc settings
         nfc.showSettings();
+
+        // To refresh the state of the nfc, we add a listener to the « resume » event.
+        // The resume event is triggered by cordova when the app is « Resumed ».
         document.addEventListener("resume", this.registerTagEvent, false);
       }
     }
