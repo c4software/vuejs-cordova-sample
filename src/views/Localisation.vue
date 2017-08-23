@@ -3,7 +3,7 @@
 <template>
   <div>
     <div id="map"></div>
-    <div v-if="loading" class="loading elevation-2">
+    <div v-if="isLoading" class="loading elevation-2">
       <div>
         <v-progress-circular indeterminate class="primary--text"></v-progress-circular>
         <br><br>
@@ -30,7 +30,9 @@
   export default {
     name: 'localisation',
     data() {
-      return {loading: true}
+      return {
+        isLoading: true
+      }
     },
     mounted() {
       // Init the leaflet map
@@ -45,18 +47,31 @@
       }
     },
     methods: {
+      stopLoading(){
+        this.isLoading = false;
+      },
       getUserLocation() {
         // Retrieve the current user location
         if (navigator.geolocation) {
+          // If the geolocation is available
           navigator.geolocation.getCurrentPosition((position) => {
+            // Get the current user position, and create a marker on the map.
+            // Pssst, look at the position object there is a lot of more information
             let user_position = [position.coords.latitude, position.coords.longitude];
             L.marker(user_position).addTo(this.map);
+
+            // Set the view on the user position at a correct zoom level
             this.map.setView(user_position, 18);
-            this.loading = false;
+            this.stopLoading();
           }, () => {
-            this.loading = false;
+            // If the geolocation plugin not answer or if we reach the timeout
+            this.stopLoading();
             nativeAlert(this.$t("positionNotAvailable", this.$t("localisation")));
           });
+        }else{
+          // If the browser is not compatible
+          nativeAlert(this.$t("positionNotAvailable", this.$t("localisation")));
+          this.stopLoading();
         }
       }
     }
