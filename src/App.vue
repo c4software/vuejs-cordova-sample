@@ -23,11 +23,11 @@ export default {
   components: {myContentDrawer},
   mounted: function () {
     // Listen for event openDrawer (triggered by other component, like the button in the home)
-    document.addEventListener("openDrawer", this.openDrawer);
+    document.addEventListener("toggleDrawer", this.toggleDrawer);
   },
   beforeDestroy: function () {
     // If the component is unmount, unlisten the event.
-    document.removeEventListener("openDrawer", this.openDrawer);
+    document.removeEventListener("toggleDrawer", this.toggleDrawer);
   },
   data: function() {
     return {
@@ -35,8 +35,8 @@ export default {
     }
   },
   methods: {
-    openDrawer (){
-      this.drawer = true;
+    toggleDrawer (){
+      this.drawer = !this.drawer;
     },
     goHome (){
       window.location.hash = "/";
