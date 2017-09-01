@@ -1,12 +1,6 @@
 <template>
   <v-app toolbar fill-height>
-    <v-navigation-drawer v-model="drawer">
-      <myContentDrawer />
-    </v-navigation-drawer>
-    <v-toolbar class="primary indigo" fixed >
-      <v-toolbar-side-icon dark @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title @click="goHome" class="white--text">{{ $t("title") }}</v-toolbar-title>
-    </v-toolbar>
+    <myToolbar />
     <main>
       <v-container fluid pa-0>
         <router-view></router-view>
@@ -16,32 +10,11 @@
 </template>
 
 <script>
-import myContentDrawer from "@/components/Drawer"
+import myToolbar from "@/components/MyToolbar"
 
 export default {
   name: 'app',
-  components: {myContentDrawer},
-  mounted: function () {
-    // Listen for event openDrawer (triggered by other component, like the button in the home)
-    document.addEventListener("toggleDrawer", this.toggleDrawer);
-  },
-  beforeDestroy: function () {
-    // If the component is unmount, unlisten the event.
-    document.removeEventListener("toggleDrawer", this.toggleDrawer);
-  },
-  data: function() {
-    return {
-      drawer: false
-    }
-  },
-  methods: {
-    toggleDrawer (){
-      this.drawer = !this.drawer;
-    },
-    goHome (){
-      window.location.hash = "/";
-    }
-  }
+  components: {myToolbar},
 }
 </script>
 
