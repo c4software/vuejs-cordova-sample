@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer">
+    <v-navigation-drawer v-model="drawer" temporary>
       <myContentDrawer />
     </v-navigation-drawer>
     <v-toolbar class="primary indigo" fixed >
