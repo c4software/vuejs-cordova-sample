@@ -25,7 +25,7 @@ npm run build
 Run the command :
 
 ```
-npm run build 
+npm run build
 cd cordova_app
 cordova platform add android
 cordova run # or build
