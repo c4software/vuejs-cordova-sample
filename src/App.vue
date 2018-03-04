@@ -1,11 +1,11 @@
 <template>
-  <v-app toolbar fill-height>
+  <v-app toolbar>
     <myToolbar />
-    <main>
-      <v-container fluid pa-0>
+    <v-content>
+      <v-container pa-0 fluid fill-height align-content-center align-center>
         <router-view></router-view>
       </v-container>
-    </main>
+    </v-content>
   </v-app>
 </template>
 

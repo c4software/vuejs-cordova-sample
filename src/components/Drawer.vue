@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar class="primary indigo" />
+    <v-toolbar class="indigo" />
     <v-list dense>
       <template v-for="(item, i) in items">
         <v-divider dark v-if="item.divider" :key="i"></v-divider>
@@ -18,6 +18,7 @@
     </v-list>
   </div>
 </template>
+
 
 <script>
 export default {
