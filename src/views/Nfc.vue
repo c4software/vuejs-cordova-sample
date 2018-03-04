@@ -1,6 +1,6 @@
 // Require Cordova plugin : phonegap-nfc
 <template>
-  <div class="middle-centered">
+  <v-container text-center>
       <span v-if="compatible">
         {{$t("nfcText.waitingTag")}}
         <br>
@@ -30,7 +30,7 @@
       </span>
       <v-btn v-on:click="showSettings" v-else-if="nfc_disabled">{{$t("nfcText.showSettings")}}</v-btn>
       <span v-else>{{$t("nfcText.notAvailable")}}</span>
-  </div>
+  </v-container>
 </template>
 
 <script>

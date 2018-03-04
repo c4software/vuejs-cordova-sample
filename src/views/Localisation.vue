@@ -1,7 +1,7 @@
 // Require Cordova Plugin : cordova-plugin-geolocation
 
 <template>
-  <div>
+  <v-container fill-height fluid>
     <div id="map"></div>
     <div v-if="isLoading" class="loading elevation-2">
       <div>
@@ -10,7 +10,7 @@
         <div>{{$t("getPosition")}}</div>
       </div>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -79,8 +79,12 @@
 </script>
 
 <style scoped>
+  .container{
+    padding: 0;
+  }
   #map{
-    height: calc(100vh - 64px);
+    height: calc(100vh - 50px);
+    width: 100%;
     z-index: 1;
   }
 

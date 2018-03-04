@@ -1,12 +1,12 @@
 <template>
-  <div class="middle-centered">
+  <v-container text-center>
     <div class="home">
       <img class="logo" src="../assets/vuejs.png" />
       <img class="logo" src="../assets/cordova_256.png" />
       <h4>{{$t("title")}}</h4>
       <v-btn @click.stop="openMenu">{{$t("showSample")}}</v-btn>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -23,11 +23,8 @@ export default {
 </script>
 
 <style scoped>
-  .home{
-    text-align: center;
-  }
   img.logo{
-    display: inline;
+    display: inline-block;
     width: 90px;
     padding: 10px;
   }
