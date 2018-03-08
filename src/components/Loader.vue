@@ -1,5 +1,5 @@
 <template>
-  <v-dialog value="true" persistent max-width="290">
+  <v-dialog value="true" persistent max-width="200">
     <v-card>
       <v-card-text class="text-center">
         <v-progress-circular :size="70" indeterminate class="primary--text"/>
