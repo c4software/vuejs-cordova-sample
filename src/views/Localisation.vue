@@ -3,13 +3,7 @@
 <template>
   <v-container fill-height fluid>
     <div id="map"></div>
-    <div v-if="isLoading" class="loading elevation-2">
-      <div>
-        <v-progress-circular indeterminate class="primary--text"></v-progress-circular>
-        <br><br>
-        <div>{{$t("getPosition")}}</div>
-      </div>
-    </div>
+    <loader v-if="isLoading" />
   </v-container>
 </template>
 
@@ -17,6 +11,7 @@
   import 'leaflet/dist/leaflet.css';
   import L from 'leaflet';
   import {nativeAlert} from "../libs/";
+  import Loader from "@/components/Loader"
 
   // Fix for icon problem with webpack
   // See https://github.com/PaulLeCam/react-leaflet/issues/255#issuecomment-261904061
@@ -29,6 +24,7 @@
 
   export default {
     name: 'localisation',
+    components: {Loader},
     data() {
       return {
         isLoading: true
