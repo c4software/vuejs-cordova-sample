@@ -1,10 +1,10 @@
 <template>
-  <v-container text-center>
+  <v-container text-xs-center>
     <div class="home">
-      <img class="logo" src="../assets/vuejs.png" />
-      <img class="logo" src="../assets/cordova_256.png" />
+      <img class="logo" src="vuejs.png" />
+      <img class="logo" src="cordova_256.png" />
       <h4>{{$t("title")}}</h4>
-      <v-btn @click.stop="openMenu">{{$t("showSample")}}</v-btn>
+      <v-btn @click="openMenu">{{$t("showSample")}}</v-btn>
     </div>
   </v-container>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" app floating>
+    <v-navigation-drawer v-model="drawer" app>
       <myContentDrawer />
     </v-navigation-drawer>
 

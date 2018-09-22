@@ -1,0 +1,31 @@
+{
+  "title": "Exemples VueJS + Cordova",
+  "showSample": "Afficher les examples",
+  "drawer": {
+    "home": "Accueil",
+    "vibration": "Vibreur",
+    "camera": "Camera",
+    "flash": "Flash",
+    "localisation": "Localisation",
+    "nfc": "Nfc"
+  },
+  "see_on_github": "Voir sur Github",
+  "getPosition": "Localisation en cours",
+  "positionNotAvailable": "Localisation impossible",
+  "startVibration": "Démarrer la vibration",
+  "flashlight": {
+    "start": "Allumer la lampe torche",
+    "stop": "Éteindre la lampe torche",
+    "notAvailable": "Plugin Cordova non installé"
+  },
+  "nfcText": {
+    "waitingTag": "En attente d’un tag…",
+    "tagSerial": "Numéro de série",
+    "notAvailable": "Votre mobile est incompatible.",
+    "showSettings": "Activer le NFC",
+    "history": "Historique",
+    "noHistory": "Aucun historique"
+  },
+  "takePhoto": "Prendre une photo",
+  "error": "Non disponible"
+}

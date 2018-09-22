@@ -1,7 +1,7 @@
 // Require Cordova plugin : cordova-plugin-vibration
 
 <template>
-  <v-container text-center>
+  <v-container text-xs-center>
     <v-btn v-on:click="doVibrate">{{$t("startVibration")}}</v-btn>
   </v-container>
 </template>
@@ -16,7 +16,7 @@
           // S.O.S in Morse ;)
           navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100,30,100]);
         }else{
-          console.error("[cordova-plugin-vibration] Is required to use this function");
+          this.$vuetifyMessageDialog.open("Attention", "[cordova-plugin-vibration] Is required to use this function", "Ok", "red")
         }
       }
     }
