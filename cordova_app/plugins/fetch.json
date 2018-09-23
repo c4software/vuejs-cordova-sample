@@ -68,7 +68,7 @@
   "cordova-plugin-vibration": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-vibration@^2.1.5"
+      "id": "cordova-plugin-vibration@^2.1.6"
     },
     "is_top_level": true,
     "variables": {}
