@@ -8,7 +8,7 @@
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -20,11 +20,11 @@ npm run build
 
 ```
 
-# Cordova
+## Cordova
 
 Run the command :
 
-```
+```sh
 npm run build
 cd cordova_app
 cordova platform add android
