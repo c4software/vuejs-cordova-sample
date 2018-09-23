@@ -2,7 +2,7 @@
 
 <template>
   <v-container text-xs-center>
-    <v-btn v-on:click="doVibrate">{{$t("startVibration")}}</v-btn>
+    <v-btn @click="doVibrate">{{$t("startVibration")}}</v-btn>
   </v-container>
 </template>
 
