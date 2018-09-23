@@ -1,8 +1,8 @@
 // Require Cordova plugin : cordova-plugin-flashlight
 
 <template>
-  <v-container text-center>
-    <v-btn v-on:click="toggle">{{ btnTitle }}</v-btn>
+  <v-container text-xs-center>
+    <v-btn @click="toggle">{{ btnTitle }}</v-btn>
   </v-container>
 </template>
 

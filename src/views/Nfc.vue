@@ -1,6 +1,6 @@
 // Require Cordova plugin : phonegap-nfc
 <template>
-  <v-container text-center>
+  <v-container text-xs-center>
       <span v-if="compatible">
         {{$t("nfcText.waitingTag")}}
         <br>
@@ -35,6 +35,7 @@
 
 <script>
   import {nativeAlert} from "../libs";
+
   export default {
     name: 'nfc',
     data(){
@@ -46,9 +47,9 @@
       }
     },
     watch:{
-      items: function (v) {
+      items: function (values) {
         // Watch push on the items data. If a new item is push save it to the « localStorage ».
-        localStorage.setItem("scanHistory", JSON.stringify(this.items));
+        localStorage.setItem("scanHistory", JSON.stringify(values));
       }
     },
     mounted(){
@@ -66,6 +67,7 @@
 
         if (typeof(nfc) !== "undefined"){
           // Nfc is available, waiting for scan
+          // eslint-disable-next-line
           nfc.addTagDiscoveredListener(this.displayTagId, this.success, this.error);
         }else{
           // Plugin not present or failed to initialized.
@@ -75,12 +77,14 @@
       unregisterTagEvent(){
         // Test if the plugin is defined
         if (typeof(nfc) !== "undefined") {
+          // eslint-disable-next-line
           nfc.removeTagDiscoveredListener(this.displayTagId);
         }
       },
       displayTagId(nfcEvent){
         // Decode tag data from the plugin
         let tag = nfcEvent.tag;
+        // eslint-disable-next-line
         let tagId = nfc.bytesToHexString(tag.id);
 
         // Push the new tag to the saved list
@@ -102,10 +106,10 @@
       success(){
         this.compatible = true;
         this.nfc_disabled = false;
-        console.log("Nfc initialized");
       },
       showSettings(){
         // Trigger the phone settings to enable the Nfc settings
+        // eslint-disable-next-line
         nfc.showSettings();
 
         // To refresh the state of the nfc, we add a listener to the « resume » event.

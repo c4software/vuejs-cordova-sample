@@ -1,0 +1,69 @@
+{
+  "_from": "cordova-plugin-flashlight@^3.2.0",
+  "_id": "cordova-plugin-flashlight@3.2.0",
+  "_inBundle": false,
+  "_integrity": "sha1-0JpAzjCtNqnwBAUBJLboFSgfu7I=",
+  "_location": "/cordova-plugin-flashlight",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "cordova-plugin-flashlight@^3.2.0",
+    "name": "cordova-plugin-flashlight",
+    "escapedName": "cordova-plugin-flashlight",
+    "rawSpec": "^3.2.0",
+    "saveSpec": null,
+    "fetchSpec": "^3.2.0"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-flashlight/-/cordova-plugin-flashlight-3.2.0.tgz",
+  "_shasum": "d09a40ce30ad36a9f004050124b6e815281fbbb2",
+  "_spec": "cordova-plugin-flashlight@^3.2.0",
+  "_where": "/Users/valentinbrosseau/javascript/vuejs-cordova-sample/cordova_app",
+  "author": {
+    "name": "Eddy Verbruggen",
+    "email": "eddyverbruggen@gmail.com",
+    "url": "https://github.com/EddyVerbruggen"
+  },
+  "bugs": {
+    "url": "https://github.com/EddyVerbruggen/Flashlight-PhoneGap-Plugin/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-flashlight",
+    "platforms": [
+      "ios",
+      "android",
+      "wp8"
+    ]
+  },
+  "deprecated": false,
+  "description": "This plugin allows you switch the Flashlight / Torch of your device on or off.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/EddyVerbruggen/Flashlight-PhoneGap-Plugin#readme",
+  "keywords": [
+    "Torch",
+    "Flashlight",
+    "Flash",
+    "Light",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "cordova-wp8"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-flashlight",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EddyVerbruggen/Flashlight-PhoneGap-Plugin.git"
+  },
+  "version": "3.2.0"
+}

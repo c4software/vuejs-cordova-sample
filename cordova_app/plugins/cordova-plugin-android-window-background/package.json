@@ -1,0 +1,56 @@
+{
+  "_from": "cordova-plugin-android-window-background@^1.0.1",
+  "_id": "cordova-plugin-android-window-background@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-JgxyAXokkkiyeVz6oNc1qxjUUpGfR4KvjgXVoE7KtW+8zpvClrwFIRT+KhJz2jjet8Ikn9009cUU/7soh+OT/g==",
+  "_location": "/cordova-plugin-android-window-background",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "cordova-plugin-android-window-background@^1.0.1",
+    "name": "cordova-plugin-android-window-background",
+    "escapedName": "cordova-plugin-android-window-background",
+    "rawSpec": "^1.0.1",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.1"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-android-window-background/-/cordova-plugin-android-window-background-1.0.2.tgz",
+  "_shasum": "64e115a68228d4e19132b6fc09517b4722e35931",
+  "_spec": "cordova-plugin-android-window-background@^1.0.1",
+  "_where": "/Users/valentinbrosseau/javascript/vuejs-cordova-sample/cordova_app",
+  "author": {
+    "name": "WINTER",
+    "email": "info@winter.ax",
+    "url": "https://winter.ax"
+  },
+  "bugs": {
+    "url": "https://github.com/winteragency/cordova-plugin-android-window-background/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Plugin to set Android window background for Cordova/Ionic applications",
+  "homepage": "https://github.com/winteragency/cordova-plugin-android-window-background",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "payments",
+    "android",
+    "ionic",
+    "background",
+    "window",
+    "background"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-android-window-background",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/winteragency/cordova-plugin-android-window-background.git"
+  },
+  "version": "1.0.2"
+}
