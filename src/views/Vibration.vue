@@ -1,7 +1,7 @@
 // Require Cordova plugin : cordova-plugin-vibration
 
 <template>
-  <v-container text-xs-center>
+  <v-container text-center>
     <v-btn @click="doVibrate">{{$t("startVibration")}}</v-btn>
   </v-container>
 </template>

@@ -1,9 +1,9 @@
 // Require Cordova plugin : cordova-plugin-camera
 
 <template>
-  <v-container text-xs-center>
-    <img v-if='imagePath !== ""' v-bind:src="imagePath">
-    <v-btn v-on:click="takePicture">{{$t("takePhoto")}}</v-btn>
+  <v-container text-center>
+    <img v-if='imagePath !== ""' :src="imagePath">
+    <v-btn @click="takePicture">{{$t("takePhoto")}}</v-btn>
   </v-container>
 </template>
 <script>

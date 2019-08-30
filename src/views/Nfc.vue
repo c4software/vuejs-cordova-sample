@@ -1,6 +1,6 @@
 // Require Cordova plugin : phonegap-nfc
 <template>
-  <v-container text-xs-center>
+  <v-container text-center>
       <span v-if="compatible">
         {{$t("nfcText.waitingTag")}}
         <br>
