@@ -8,7 +8,7 @@ module.exports = {
     }
   },
 
-  baseUrl: '',
+  publicPath: '',
   outputDir: 'cordova_app/www',
   assetsDir: undefined,
   runtimeCompiler: undefined,

@@ -1,10 +1,10 @@
 <template>
-  <v-container text-xs-center>
+  <v-container text-center>
     <div class="home">
       <img class="logo" src="vuejs.png" />
       <img class="logo" src="cordova_256.png" />
       <h4>{{$t("title")}}</h4>
-      <v-btn @click="openMenu">{{$t("showSample")}}</v-btn>
+      <v-btn @click="openMenu" class="mt-10">{{$t("showSample")}}</v-btn>
     </div>
   </v-container>
 </template>
@@ -26,6 +26,6 @@ export default {
   img.logo{
     display: inline-block;
     width: 90px;
-    padding: 10px;
+    padding: 20px;
   }
 </style>
