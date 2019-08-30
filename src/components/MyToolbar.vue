@@ -4,10 +4,10 @@
       <myContentDrawer />
     </v-navigation-drawer>
 
-    <v-toolbar class="indigo" clipped-left app>
-      <v-toolbar-side-icon dark @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+    <v-app-bar class="indigo" clipped-left app>
+      <v-app-bar-nav-icon dark @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title @click="goHome" class="white--text">{{ $t("title") }}</v-toolbar-title>
-    </v-toolbar>
+    </v-app-bar>
   </div>
 </template>
 

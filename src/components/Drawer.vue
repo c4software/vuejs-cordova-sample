@@ -1,21 +1,16 @@
 <template>
   <div>
     <v-toolbar class="indigo" flat/>
-    <v-list dense>
-      <template v-for="(item, i) in items">
-        <v-divider dark v-if="item.divider" :key="i"></v-divider>
-        <v-list-tile :to="item.action" :key="i" v-else>
-          <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>
-              {{ item.text }}
-            </v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </template>
-    </v-list>
+
+    <v-list-item v-for="(item, i) in items" :key="`item_${i}`"  :to="item.action">
+      <v-list-item-icon>
+        <v-icon v-text="item.icon"></v-icon>
+      </v-list-item-icon>
+
+      <v-list-item-content>
+          <v-list-item-title v-text="item.text"></v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
   </div>
 </template>
 
