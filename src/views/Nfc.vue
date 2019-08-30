@@ -1,37 +1,40 @@
 // Require Cordova plugin : phonegap-nfc
+// TODO UPDATE
 <template>
   <v-container text-center>
       <span v-if="compatible">
         {{$t("nfcText.waitingTag")}}
         <br>
         <v-dialog v-model="dialog" scrollable>
-          <v-btn slot="activator">{{$t("nfcText.history")}}</v-btn>
+
+          <template v-slot:activator="{ on }">
+            <v-btn v-on="on">{{$t("nfcText.history")}}</v-btn>
+          </template>
+
           <v-card>
             <v-card-title>{{$t("nfcText.history")}}</v-card-title>
             <v-divider></v-divider>
             <v-card-text style="height: 300px;">
-              <v-list v-if="items.length > 0">
-                <v-list-tile v-for="item in items" v-bind:key="item">
-                  <v-list-tile-content>
-                    <v-list-tile-title v-text="item"></v-list-tile-title>
-                  </v-list-tile-content>
-                </v-list-tile>
-              </v-list>
-              <v-list v-else>
-                <v-list-tile>
-                  <v-list-tile-content>
-                    <v-list-tile-title v-text="$t('nfcText.noHistory')" class="text-xs-center"></v-list-tile-title>
-                  </v-list-tile-content>
-                </v-list-tile>
-              </v-list>
+                <v-list-item v-for="item in items" v-bind:key="item">
+                  <v-list-item-content>
+                    <v-list-item-title v-text="item"></v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-list-item v-if="items.length === 0">
+                  <v-list-item-content>
+                    <v-list-item-title v-text="$t('nfcText.noHistory')" class="text-center"></v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
             </v-card-text>
           </v-card>
+          
         </v-dialog>
       </span>
-      <v-btn v-on:click="showSettings" v-else-if="nfc_disabled">{{$t("nfcText.showSettings")}}</v-btn>
+      <v-btn @click="showSettings" v-else-if="nfc_disabled">{{$t("nfcText.showSettings")}}</v-btn>
       <span v-else>{{$t("nfcText.notAvailable")}}</span>
   </v-container>
 </template>
+
 
 <script>
   import {nativeAlert} from "../libs";
