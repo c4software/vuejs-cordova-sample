@@ -20,7 +20,7 @@ npm run build
 
 ```
 
-## Cordova
+## First Cordova build
 
 Run the command :
 
@@ -29,6 +29,12 @@ npm run build
 cd cordova_app
 cordova platform add android
 cordova run # or build
+```
+
+## Next Cordova build
+
+```sh
+npm run cordova_run # or cordova_build
 ```
 
 ## Plugins
