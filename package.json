@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "cordova_run": "vue-cli-service build && cd cordova_app && cordova run",
+    "cordova_build": "vue-cli-service build && cd cordova_app && cordova build"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
